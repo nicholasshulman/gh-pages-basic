@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Projects</h1>
+
+  <div class="projects">
+    {% for project in site.data.projects %}
+      <img src="{{ project.image | prepend: site.baseurl }}" alt="">
+      <h2><a href="{{ project.url }}" target="_blank">{{ project.name }}</a></h2>
+      <p>{{ project.description }}</p>
+    {% endfor %}
+  </div>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
